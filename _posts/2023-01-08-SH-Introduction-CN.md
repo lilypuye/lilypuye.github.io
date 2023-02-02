@@ -4,9 +4,12 @@ author: puye
 date: 2023-01-08 21:55:00 +0800
 categories: [Graphics, Tutorial]
 tags: [SH, Tutorial]
-pin: true
+pin: false
+comments: true
 math: true
 ---
+
+English Version: [**Introduction to Spherical Harmonics**](https://puye.blog/cotes2020/jekyll-theme-chirpy/fork)
 
 尽量不用各种术语来讲清楚SH（Spherical Harmonics）系数，以及SH在简单光照描述上的应用。 科普向。
 
@@ -41,7 +44,6 @@ $y_{3} = sin(4x)$
 ....
 
 ![TheBaseFunc](https://pic1.zhimg.com/v2-ab9c4891e80f3ac3f68713e74e16fde4_r.jpg)
-
 
 
 
@@ -179,11 +181,13 @@ $r = 0.5 + 0.1 cos θ + 0.07 sin θ + 0.05 cos θ sin θ + 0.3(2cos^2θ - 1)$
 ![TheBaseFunc](https://pic2.zhimg.com/v2-447fa3cffce97c4d95fd924c3e4ce5b9_r.jpg)
 
 当用来描述不同方向光照的SH基函数我们一般用到二阶或者三阶，二阶是4个系数：
+
 ![TheBaseFunc](https://pic4.zhimg.com/v2-411c4a303d19cd6ce40427c044f21817_b.jpg)
 
 拓展到rgb，就是4 * 3 = 12个系数
 
 三阶是9个系数：
+
 ![TheBaseFunc](https://pic3.zhimg.com/v2-288c6cb3e93e89bc4084945d3ae2225a_r.jpg)
 
 拓展到rgb，就是9 * 3 = 27个系数
@@ -199,4 +203,3 @@ $r = 0.5 + 0.1 cos θ + 0.07 sin θ + 0.05 cos θ sin θ + 0.3(2cos^2θ - 1)$
 
 
 
-知乎链接：https://zhuanlan.zhihu.com/p/351289217
