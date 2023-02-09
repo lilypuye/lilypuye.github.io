@@ -7,6 +7,7 @@ tags: [SH, Tutorial]
 pin: false
 comments: true
 math: true
+image: https://picx.zhimg.com/v2-4908d0a071c9df111a1fe00ee0ab5bbd_r.jpg
 ---
 
 This article tries to explain **Spherical Harmonics** in simple words without mathematical terms. And how **SH** is applied in **Radiometric/Photometric**
