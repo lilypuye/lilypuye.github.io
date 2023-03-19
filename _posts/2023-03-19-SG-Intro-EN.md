@@ -7,7 +7,7 @@ tags: [SG, Tutorial]
 pin: false
 comments: true
 math: true
-image: https://pic3.zhimg.com/v2-6c09fac727b31d465e0b2a077d12d896_r.jpg
+image: /assets/img/post/SGexample.png
 ---
 
 
