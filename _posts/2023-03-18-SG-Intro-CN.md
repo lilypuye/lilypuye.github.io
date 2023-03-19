@@ -99,6 +99,7 @@ SG有这么多好处，又简单又好理解的，还没有高阶SH那些乱七�
 
 
 
-参考链接：
+## 参考链接：
+
 https://blog.selfshadow.com/publications/s2015-shading-course/rad/s2015_pbs_rad_slides.pdf
 https://mynameismjp.wordpress.com/2016/10/09/sg-series-part-2-spherical-gaussians-101/

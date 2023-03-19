@@ -31,12 +31,12 @@ The image in **2D Cartesian Coordinates** looks like this.
 ![TheBaseFunc](https://pic1.zhimg.com/v2-9e027f3a8954b4a359da6d19af2e55cc_b.jpg)
 
 
-The physical meaning of the parameters is also easy to understand. a represents the size of the lobe, μ represents the central direction of the lobe, and λ represents the fatness of the lobe.
+The physical meaning of the parameters is also easy to understand. **a** represents the size of the lobe, **μ** represents the central direction of the lobe, and **λ** represents the fatness of the lobe.
 
 Compared to the fixed **SH** basis function, **SG** has an extremely high degree of freedom: the number of basis functions used, how they are distributed, and how fat they are can all be arbitrary. Of course, this also places higher demands on the person designing the basis function, otherwise it may be costly and the effect may not be good. Like other basis functions, the more basis functions used, the stronger the expressive power. Generally, a set of **SG** basis functions contains multiple basis functions in different directions, such as this:
 ![TheBaseFunc](https://pic3.zhimg.com/v2-6c09fac727b31d465e0b2a077d12d896_r.jpg)
 
-**SG** basis functions are also appropriate for describing specular reflection because they resemble the results of BRDF calculations.
+**SG** basis functions are also appropriate for describing specular reflection because they resemble the results of **BRDF** calculations.
 
 
 ![TheBaseFunc](https://pic4.zhimg.com/v2-7cfb9883596a1175850654a8cb0a4f77_r.jpg)
@@ -44,7 +44,7 @@ Compared to the fixed **SH** basis function, **SG** has an extremely high degree
 
 With so many advantages, **SG** is simple and easy to understand, and it doesn't have the messy artifacts of higher-order **SH**. So, who would still use **SH**?
 
-However, **SH** has many strengths that **SG** lacks, such as orthogonality and rotational invariance. Let's illustrate this with an example:
+However, **SH** has many strengths that **SG** lacks, such as **Orthogonality** and **Rotational Invariance**. Let's illustrate **Rotational Invariance** with an example:
 
 Suppose we have two **SH** basis functions (blue and red), and we want to use these two basis functions to describe another function with the same shape as the basis functions (purple)
 
@@ -64,31 +64,29 @@ However, no matter how the coefficients are adjusted, the target characteristics
 
 
 
-When applied to actual specular calculations, it is found that **SG** cannot maintain the Shape of the specular lobe very well. The Shape of the specular lobe in the direction of the basis function definition can be maintained relatively well, but if the direction is between the angles of several basis functions, the Shape of the specular lobe will be more scattered.
+When applied to actual specular calculations, it is found that **SG** cannot maintain the shape of the specular lobe very well. The shape of the specular lobe in the direction of the basis function definition can be maintained relatively well, but if the direction is between the angles of several basis functions, the shape of the specular lobe will be more scattered.
 
-[The"Order:"1886](https://blog.selfshadow.com/publications/s2015-shading-course/rad/s2015_pbs_rad_slides.pdf) uses **SG** to describe the specular highlights, with each basis function using a set of Lightmaps. It seems that the problem of specular deformation is not very obvious.
+[The"Order:"1886](https://blog.selfshadow.com/publications/s2015-shading-course/rad/s2015_pbs_rad_slides.pdf) uses **SG** to describe the specular, with each basis function using a set of Lightmaps. It seems that the problem of specular deformation is not very obvious.
 
 ![TheBaseFunc](https://pic2.zhimg.com/v2-2889f6171aaea148cefc26951922cfb5_r.jpg)
 
 
-In fact, when it comes to describing diffuse lighting, **SG** is not commonly seen. Ambient Cube (also known as HL2) is more popular among artists, with one intensity description for each direction:
+In fact, when it comes to describing diffuse lighting, **SG** is not commonly seen. **Ambient Cube** (also known as **HL2**) is more popular among artists, with one intensity description for each direction:
 
 ![TheBaseFunc](https://pic3.zhimg.com/v2-5057e73a7e07948809bcd2a6284fccce_r.jpg)
 
-
-Degenerated to 2D probably looks like this
+In **2D Cartesian Coordinates**, it probably looks like this when degenerated.
 
 ![TheBaseFunc](https://pic3.zhimg.com/v2-6520b696924a38a974ab0aebbf9a68f2_b.jpg)
 
+The function shape and properties are very similar to **SG** (although the expressions are different)
 
-The function Shape and properties are very similar to **SG** (although the expressions are different)
+Why is **Ambient Cube** more popular among artists? Because it is very easy to understand its physical meaning, and you can adjust it wherever you want. Developers who use **SH** basis functions to describe diffuse reflections have encountered such complaints: Why can't the negative **y** direction be darker? It should be completely black at the bottom! But with **Ambient Cube**, this problem doesn't exist. If you want to make a certain direction pure black, just change the corresponding direction coefficient to 0.
 
-Why is Ambient Cube more popular among artists? Because it is very easy to understand its physical meaning, and you can adjust it wherever you want. Developers who use **SH** basis functions to describe diffuse reflections have encountered such complaints: Why can't the negative y direction be darker? It Should be completely black at the bottom! But with Ambient Cube, this problem doesn't exist. If you want to make a certain direction pure black, just change the corresponding direction coefficient to 0.
-
-When comparing the number of coefficients, the commonly used ones are: 2nd order **SH** has 4 coefficients, AmbientCube has 6 coefficients, and 3rd order **SH** has 9 coefficients.
+When comparing the number of coefficients, the commonly used ones are: 2nd order **SH** has 4 coefficients, **Ambient Cube** has 6 coefficients, and 3rd order **SH** has 9 coefficients.
 
 
-Reference links:
+## Reference links:
 
 https://blog.selfshadow.com/publications/s2015-Shading-course/rad/s2015_pbs_rad_slides.pdf
 https://mynameismjp.wordpress.com/2016/10/09/SG-series-part-2-spherical-gaussians-101/
