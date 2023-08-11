@@ -7,7 +7,9 @@ tags: [SH, Tutorial]
 pin: false
 comments: true
 math: true
-image: https://picx.zhimg.com/v2-4908d0a071c9df111a1fe00ee0ab5bbd_r.jpg
+image: 
+  path: https://picx.zhimg.com/v2-4908d0a071c9df111a1fe00ee0ab5bbd_r.jpg
+  lqip: https://picx.zhimg.com/v2-4908d0a071c9df111a1fe00ee0ab5bbd_r.jpg
 ---
 
 English Version: [**Introduction to Spherical Harmonics**](https://puye.blog/cotes2020/jekyll-theme-chirpy/fork)
