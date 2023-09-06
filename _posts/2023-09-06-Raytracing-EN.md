@@ -111,8 +111,6 @@ What is the issue of thread coherence?
 
 Parallel rays, after reflecting or refracting through real materials, frequently disperse in entirely distinct directions. Alternatively, contemplate a group of parallel rays, where one, denoted as A, intersects with a model, while another, named B, does not. Consequently, the subsequent tracing calculations for A and B become entirely incongruous. Such disparities can pose significant challenges for the parallel architecture of GPUs.
 
-![Raytracing](https://pic4.zhimg.com/v2-fd75f8885065b26a00dc5a5509113437_r.jpg)
-
 ## Raytracing API
 To make use of hardware-accelerated ray tracing, you must utilize supported ray tracing APIs. Some examples include DX12's ray tracing API (DXR), along with Metal Ray tracing and Vulkan Ray tracing, among others.
 
