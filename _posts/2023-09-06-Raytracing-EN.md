@@ -1,7 +1,5 @@
 ---
 title: What we talk about when we talk about Ray Tracing?
-
-
 author: puye
 date: 2023-09-06 21:20:00 +0800
 categories: [Graphics]
